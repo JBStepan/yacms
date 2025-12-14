@@ -3,6 +3,9 @@
 	import favicon from '$lib/assets/favicon.svg';
 	import * as Sidebar from "$lib/components/ui/sidebar/index.js";
   	import AppSidebar from "$lib/components/AppSidebar.svelte";
+	import { page } from "$app/state";
+
+	let pathname = $derived(page.url.pathname)
 	
 	let { children } = $props();
 </script>
@@ -11,12 +14,11 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-<div class="container-wrapper flex flex-1 flex-col px-2">
+<div class="h-full">
 	<Sidebar.Provider class="text-xl">
-	<AppSidebar />
-	<main class="p-4 pt-2 w-full h-full">
-		<Sidebar.Trigger class="-ms-1" />
-		{@render children?.()}
-	</main>
+		<AppSidebar pathname={pathname} />
+		<Sidebar.Inset>
+			{@render children?.()}
+		</Sidebar.Inset>
 	</Sidebar.Provider>
 </div>

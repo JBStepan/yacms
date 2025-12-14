@@ -1,1 +1,7 @@
-<h1 class=" text-3xl">YACMS Dashboard</h1>
+<script>
+
+</script>
+
+<svelte:head>
+    <title>Dashboard - YACMS</title>
+</svelte:head>
