@@ -1,0 +1,10 @@
+{
+  "name": "yacms",
+  "private": true,
+  "packageManager": "pnpm@10.4.1",
+  "scripts": {
+    "dev": "pnpm -r --parallel dev",
+    "build": "pnpm --filter admin build && pnpm --filter server build",
+    "start": "pnpm --filter server start"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "private": "true",
+  "scripts": {
+    "dev": "tsx watch --env-file=.env src/index.ts",
+    "build": "tsdown",
+    "start": "node --env-file=.env dist/index.mjs"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.3",
+    "@yacms/shared": "workspace:^",
+    "better-auth": "^1.7.6",
+    "hono": "^4.13.12",
+    "mongodb": "^7.7.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "tsdown": "^0.23.0",
+    "tsx": "^4.23.15",
+    "typescript": "^6.0.3"
+  }
+}
