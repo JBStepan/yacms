@@ -1,2 +1,13 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+    import { authClient } from "$lib/auth";
+
+    let session = authClient.useSession()
+
+    let signOut = () => {authClient.signOut()}
+</script>
+
+<h1>Welcome to YACMS™</h1>
+{#if $session}
+    <p>Email: {$session.data?.user.email}</p>
+{/if}
+<button onclick={signOut}>Signout</button>

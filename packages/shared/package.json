@@ -2,6 +2,11 @@
   "name": "@yacms/shared",
   "private": true,
   "type": "module",
-  "exports": { ".": "./src/index.ts" },
-  "dependencies": { "zod": "^3.23.0" }
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "dependencies": {
+    "better-auth": "^1.7.6",
+    "zod": "^3.23.0"
+  }
 }
